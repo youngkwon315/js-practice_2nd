@@ -12,6 +12,7 @@ function handleGeoSuccess(position) {
     longitude,
   };
   saveCoords(coordsObj);
+  getWeather(latitude, longitude);
 }
 
 function handleGeoError() {
@@ -27,6 +28,8 @@ function loadCoords() {
   if (loadedCoords === null) {
     askForCoords();
   } else {
+    const parsedCoords = JSON.parse(loadCoords);
+    getWeather(parsedCoords.  )
   }
 }
 
